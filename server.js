@@ -39,7 +39,10 @@ app.get('/contacts', async (req, res) => {
       res.status(500).send('Error fetching contacts');
     }
   });
-
+  
+  app.get('/check', (req, res) => {
+    res.json({ message: 'working' });
+  });
 //  try {
 //      const contacts = await Contact.find();
 //      res.status(200).json(contacts);
